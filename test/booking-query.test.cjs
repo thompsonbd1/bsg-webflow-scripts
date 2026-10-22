@@ -4,7 +4,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const test = require('node:test');
 
-for (const version of ['2.6.0', '2.6.2', '2.7.0', '2.8.0']) {
+for (const version of ['2.6.0', '2.6.2', '2.7.0', '2.8.0', '2.9.1']) {
   const source = fs.readFileSync(path.join(__dirname, '..', `booking_widget_renderer-${version}.js`), 'utf8');
   // Exercise the maintained minified renderer's actual URL construction, without a browser or widget request.
   const fragment = source.match(/src\+='\?checkin='[\s\S]*?;mount\.innerHTML/);
